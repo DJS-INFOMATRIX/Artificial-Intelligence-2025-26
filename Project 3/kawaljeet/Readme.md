@@ -367,9 +367,8 @@ MIT License - See LICENSE file for details
 
 For issues and questions:
 1. Check [ARCHITECTURE.md](ARCHITECTURE.md) for technical details
-2. See [TESSERACT_SETUP.md](TESSERACT_SETUP.md) for OCR help
-3. Review troubleshooting section above
-4. Open an issue on GitHub
+2. Review troubleshooting section above
+3. Open an issue on GitHub
 
 ---
 
