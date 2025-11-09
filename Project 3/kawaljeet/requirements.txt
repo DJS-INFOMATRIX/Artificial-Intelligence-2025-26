@@ -1,0 +1,29 @@
+# Core dependencies - LOCAL & FAST
+# Using Microsoft Phi-2 (2.7B parameters)
+# GPU Performance: 5-15 seconds per response with 8-bit quantization (4GB VRAM)
+# CPU Fallback: 30-60 seconds per response
+
+# Core ML
+torch>=2.0.0
+transformers>=4.35.0
+
+# Fast local embeddings
+sentence-transformers>=2.2.2
+
+# LangChain (for memory and text processing)
+langchain>=0.1.0
+langchain-community>=0.0.10
+
+# Vector DB
+weaviate-client==3.26.7
+
+# Document processing
+PyPDF2>=3.0.0
+pytesseract>=0.3.10
+Pillow>=10.0.0
+
+# UI (Flask-based web interface)
+Flask>=3.0.0
+
+# Utilities
+python-dotenv>=1.0.0
