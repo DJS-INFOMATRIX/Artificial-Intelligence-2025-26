@@ -1,0 +1,62 @@
+#  Schema creation in raw weaviate  #
+# Schema only needs to be used if we are using the raw weaviate. It's not required with langchain weaviate
+
+        #making the weavieat schema
+        # self.schema = {
+        #     'class':'chunk',
+        #     'vectorizer':'none',
+        #     'properties':[
+        #         {"name": "text", "dataType": ["text"]},
+        #         {"name": "source", "dataType": ["text"]},
+        #         {"name": "chunk_id", "dataType": ["int"]},
+        #         {"name": "file_name", "dataType": ["text"]}
+        #     ],
+        #     "vectorIndexConfig": {
+        #         "distance": "cosine"    # recommended for sentence-transformers
+        #     }
+        # }
+        # try:
+        #     self.client.schema.create_class(self.schema)
+        # except:
+        #     pass #case when schema already exists
+        # #now schema is created
+
+# Uploading to Vecored DB i9n raw weaviate  #
+
+#The code below is for raw Weaviate not needed for weaviate via Langchain
+        
+        # # Using Weaviate's batch API for efficient uploads
+        # with self.client.batch as batch:
+        #     batch.batch_size = 100 
+        # for idx,chunk in enumerate(self.chunks):
+        #     #Generating the embeddings for the page content for the particular chunk
+        #     embedding = self.embedding_generator.embed_query(chunk.page_content)
+
+        #     #Extracting the metadata
+        #     src = chunk.metadata.get('source','')
+        #     file_name = src.split('\\')[-1] if '\\' in src else src.split('/')[-1]
+
+        #     #prepairing data object
+            
+        #     '''
+        #     What is a data object:-
+
+        #     The Data object is needed for weaviate to know what the meta data is,
+            # what the original page content was, etc.
+            # without this, weaviate will not have any original text content. It will only have vectors
+            # #making is useless for  rag application
+            # '''
+            # data_object = {
+            #     'text':chunk.page_content,
+            #     'source': src,
+            #     'chunk_id': idx,
+            #     'file_name':file_name
+            # }
+
+            # #adding batch with vector
+            # batch.add_data_object(
+            #     data_object = data_object,
+            #     class_name = 'chunk',
+            #     vector = embedding
+            # )
+            # print(f"Successfully uploaded chunk with index {idx} into Weaviate")

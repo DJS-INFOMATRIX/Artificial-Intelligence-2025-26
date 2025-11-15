@@ -1,0 +1,22 @@
+services:
+  weaviate:
+    image: cr.weaviate.io/semitechnologies/weaviate:${WEAVIATE_VERSION}
+    command:
+      - --host
+      - 0.0.0.0
+      - --port
+      - "${WEAVIATE_PORT}"
+      - --scheme
+      - http
+    ports:
+      - "${WEAVIATE_PORT}:${WEAVIATE_PORT}"
+      - "${WEAVIATE_GRPC_PORT}:${WEAVIATE_GRPC_PORT}"
+    environment:
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: "${ENABLE_ANON_ACCESS}"
+      PERSISTENCE_DATA_PATH: "${DATA_PATH}"
+    volumes:
+      - weaviate_data:${DATA_PATH}
+    restart: on-failure
+
+volumes:
+  weaviate_data:
