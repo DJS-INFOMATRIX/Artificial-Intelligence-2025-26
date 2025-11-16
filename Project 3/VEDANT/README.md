@@ -189,9 +189,9 @@ indian-car-rag-chatbot/
 ## 📸 Demo
 
 <p align="center">
-  <img src="screenshots/chat1-demo.png" width="85%">
-  <img src="screenshots/chat2-demo.png" width="85%">
-  <img src="screenshots/chat3-demo.png" width="85%">
+  <img src="chat1-demo.png" width="85%">
+  <img src="chat2-demo.png" width="85%">
+  <img src="chat3-demo.png" width="85%">
 </p>
 
 ---
