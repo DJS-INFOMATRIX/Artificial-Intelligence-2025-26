@@ -1,0 +1,13 @@
+langchain
+weaviate-client
+sentence-transformers
+fastapi
+uvicorn[standard]
+streamlit
+pandas
+python-dotenv
+tqdm
+requests
+faiss-cpu
+transformers
+torch
