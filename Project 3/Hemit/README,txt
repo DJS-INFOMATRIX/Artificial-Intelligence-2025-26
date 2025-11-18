@@ -1,0 +1,268 @@
+# 🎮 Games RAG Chatbot
+### Retrieval-Augmented Generation using Weaviate + LangChain + Streamlit + Local LLM (Ollama)
+
+A domain-specific chatbot that answers complex questions about video games using vector search, embeddings, and conversational memory.
+
+Supports:
+- ✅ CLI Mode
+- ✅ API Server (FastAPI)
+- ✅ Streamlit Web UI
+- ✅ Local LLM (Ollama) or OpenAI
+- ✅ Weaviate Vector Database
+- ✅ Sentence-Transformers Embeddings
+
+---
+
+## 🚀 Features
+
+- 🎮 Domain-specific knowledge about video games  
+- ⚡ Fast semantic search via Weaviate + local embeddings  
+- 🤖 High-quality LLM responses (Ollama / OpenAI)  
+- 🧠 Conversational memory for follow-ups  
+- 🌐 Multi-mode runtime: CLI / API / Streamlit  
+- 📚 Simple dataset system (JSON or Markdown)
+
+---
+
+## 📁 Project Structure
+
+games_RAG/
+│
+├── app.py # Main unified chatbot (CLI, API, Streamlit)
+├── ingest_games.py # Ingests game data into Weaviate
+├── docker-compose.yml # Local Weaviate instance
+├── requirements.txt # Python dependencies
+│
+├── data/
+│ ├── games_data.json # Main dataset (replace with your own)
+│ └── games/ # Optional folder for .md files
+│
+├── START_GAMES.bat # Windows launcher (Streamlit)
+└── README.md
+
+
+---
+
+# 🧠 How It Works
+
+1. Your dataset (`games_data.json` or `.md` files) is embedded with `sentence-transformers/all-MiniLM-L6-v2`.
+2. Data is stored in **Weaviate** as vectors.
+3. User query → embeddings → semantic search → top-k chunks.
+4. Reranking + enhanced prompt building.
+5. Local LLM (Ollama) or OpenAI generates the final answer using RAG context.
+
+---
+
+# 📦 Installation & Setup
+
+## 1️⃣ Install Docker Desktop
+Required for Weaviate.
+
+Verify Docker is running:
+docker info
+
+
+---
+
+## 2️⃣ Setup Virtual Environment
+
+### Windows:
+
+
+python -m venv venv
+venv\Scripts\Activate.ps1
+
+
+### Mac/Linux:
+
+
+python3 -m venv venv
+source venv/bin/activate
+
+
+Install dependencies:
+
+
+pip install -r requirements.txt
+pip install sentence-transformers weaviate-client tqdm
+
+
+---
+
+## 3️⃣ Start Weaviate
+
+Inside the project folder:
+
+
+docker compose up -d
+
+
+Check status:
+
+
+http://localhost:8080/v1/.well-known/ready
+
+
+---
+
+## 4️⃣ Add Your Game Data
+
+Option A — JSON file:
+Place here:
+
+
+data/games_data.json
+
+
+Format:
+```json
+[
+  {
+    "game": "Elden Ring",
+    "genre": "Action RPG",
+    "section": "Overview",
+    "content": "Elden Ring features an open world..."
+  }
+]
+
+
+Option B — Markdown files:
+Place .md files here:
+
+data/games/
+
+5️⃣ Ingest Data into Weaviate
+
+Run:
+
+python ingest_games.py
+
+
+This will:
+
+Create the GameKnowledge collection
+
+Chunk your data
+
+Compute embeddings
+
+Store vectors in Weaviate
+
+6️⃣ Run the Chatbot (Streamlit Web UI)
+Option A — Using .bat launcher (Windows):
+
+Double-click:
+
+START_GAMES.bat
+
+Option B — Using command:
+streamlit run app.py -- web
+
+
+Open:
+
+http://localhost:8501
+
+▶ Other Modes
+CLI Mode:
+python app.py cli
+
+API Mode (FastAPI):
+python app.py api
+
+
+API root:
+
+http://localhost:8000
+
+
+Docs:
+
+http://localhost:8000/docs
+
+⚙ Environment Variables (Optional)
+WEAVIATE_URL=http://localhost:8080
+WEAVIATE_CLASS=GameKnowledge
+OPENAI_API_KEY=sk-...
+OPENAI_MODEL=gpt-4o-mini
+
+
+Windows:
+
+setx OPENAI_API_KEY "sk-..."
+
+🚦 Troubleshooting
+❌ Docker error: cannot find dockerDesktopLinuxEngine
+
+➡ Docker Desktop is not running
+Open Docker Desktop → wait for “Running”
+
+❌ No documents found
+
+Ensure dataset exists in:
+
+data/games_data.json
+
+
+Or:
+
+data/games/*.md
+
+
+Then re-run:
+
+python ingest_games.py
+
+❌ Streamlit blank page
+
+Use:
+
+streamlit run app.py -- web
+
+❌ Ollama not found
+
+Start Ollama:
+
+ollama serve
+
+❌ OpenAI errors
+
+Set your API key:
+
+export OPENAI_API_KEY="sk-..."
+
+📘 Dataset Format
+[
+  {
+    "game": "Dark Souls",
+    "genre": "Soulslike",
+    "section": "Combat",
+    "content": "Features stamina-based combat and parries..."
+  }
+]
+
+🧩 Future Enhancements
+
+Persistent conversation memory stored in Weaviate
+
+Multi-model switching in UI
+
+Live embeddings visualizer
+
+Retrieval insights panel
+
+Fine-tuned prompts per genre
+
+🤝 Contributing
+
+Fork this repo
+
+Create a new branch
+
+Commit changes
+
+Submit a pull request
+
+📜 License
+
+MIT License — free to use, modify, and distribute.

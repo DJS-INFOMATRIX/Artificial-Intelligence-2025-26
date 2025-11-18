@@ -1,0 +1,24 @@
+# Core dependencies
+langchain
+langchain-community
+langchain-huggingface
+langchain-ollama
+openai
+
+# Vector database
+weaviate-client
+langchain-weaviate
+
+# API Server
+fastapi
+uvicorn[standard]
+pydantic
+
+# Web interface
+streamlit
+
+# Utilities
+python-dotenv
+tqdm
+sentence-transformers
+requests

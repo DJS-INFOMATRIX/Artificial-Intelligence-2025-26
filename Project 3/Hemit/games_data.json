@@ -1,0 +1,136 @@
+[
+  {
+    "game": "The Legend of Zelda: Breath of the Wild",
+    "genre": "Action-Adventure",
+    "section": "Overview",
+    "content": "Open-air exploration game with physics-based interactions, climbing freedom, shrine puzzles, and dynamic environments."
+  },
+  {
+    "game": "The Legend of Zelda: Tears of the Kingdom",
+    "genre": "Action-Adventure",
+    "section": "Overview",
+    "content": "Build-anything sandbox mechanics using fuse systems, sky islands, underground zones, and freeform problem solving."
+  },
+  {
+    "game": "God of War (2018)",
+    "genre": "Action",
+    "section": "Overview",
+    "content": "Narrative-driven adventure following Kratos and Atreus, featuring axe-based combat and semi-open realms."
+  },
+  {
+    "game": "God of War Ragnarok",
+    "genre": "Action",
+    "section": "Overview",
+    "content": "Expanded mechanics with multiple weapon stances, diverse realms, and more enemy variety."
+  },
+  {
+    "game": "Spider-Man PS4",
+    "genre": "Action",
+    "section": "Overview",
+    "content": "Fast-paced traversal, responsive combat, gadget use, and open-world Manhattan exploration."
+  },
+  {
+    "game": "Spider-Man Miles Morales",
+    "genre": "Action",
+    "section": "Overview",
+    "content": "Venom powers, stealth refinements, and snowy New York sandbox gameplay."
+  },
+  {
+    "game": "Horizon Zero Dawn",
+    "genre": "Action RPG",
+    "section": "Overview",
+    "content": "Robot creatures, bow-based combat, crafting, biomes, and tribal storytelling."
+  },
+  {
+    "game": "Horizon Forbidden West",
+    "genre": "Action RPG",
+    "section": "Overview",
+    "content": "Improved traversal, underwater zones, more machine types, and expanded skill trees."
+  },
+  {
+    "game": "Assassin’s Creed Odyssey",
+    "genre": "Action RPG",
+    "section": "Overview",
+    "content": "Naval exploration, skill-based progression systems, branching quests, and ancient Greece setting."
+  },
+  {
+    "game": "Assassin’s Creed Valhalla",
+    "genre": "Action RPG",
+    "section": "Overview",
+    "content": "Viking raids, settlement building, and open-world exploration across England."
+  },
+  
+  {
+    "game": "Elden Ring",
+    "genre": "Open-World RPG",
+    "section": "Overview",
+    "content": "Massive landscapes, dungeon variety, mounted combat, ashes of war, and flexible build creation."
+  },
+  {
+    "game": "Dark Souls",
+    "genre": "Action RPG",
+    "section": "Overview",
+    "content": "Stamina management, parry timing, bonfire checkpoints, and tightly connected world layout."
+  },
+  {
+    "game": "Dark Souls III",
+    "genre": "Action RPG",
+    "section": "Overview",
+    "content": "Faster-paced combat, weapon arts, and boss-centric progression."
+  },
+  {
+    "game": "Bloodborne",
+    "genre": "Action RPG",
+    "section": "Overview",
+    "content": "Aggressive combat with rally mechanics, trick weapons, and gothic horror environments."
+  },
+  {
+    "game": "Skyrim",
+    "genre": "Open-World RPG",
+    "section": "Overview",
+    "content": "Dragon battles, magic casting, exploration freedom, guilds, and skill-based leveling."
+  },
+  {
+    "game": "The Witcher 3",
+    "genre": "Open-World RPG",
+    "section": "Overview",
+    "content": "Monster contracts, detailed quests, crafting, alchemy, and multi-region exploration."
+  },
+  {
+    "game": "Cyberpunk 2077",
+    "genre": "Action RPG",
+    "section": "Overview",
+    "content": "Cybernetics, branching storylines, dense city exploration, and weapon-tech builds."
+  },
+  {
+    "game": "Dragon Age Inquisition",
+    "genre": "RPG",
+    "section": "Overview",
+    "content": "Party-based combat, war table decisions, and zone-based exploration."
+  },
+  {
+    "game": "Mass Effect",
+    "genre": "Sci-Fi RPG",
+    "section": "Overview",
+    "content": "Squad shooter mechanics, dialogue choices, and narrative branching."
+  },
+  {
+    "game": "Mass Effect 2",
+    "genre": "Sci-Fi RPG",
+    "section": "Overview",
+    "content": "Loyalty missions, cover shooter improvements, and companion-driven storytelling."
+  },
+  {
+    "game": "Persona 5",
+    "genre": "JRPG",
+    "section": "Overview",
+    "content": "Turn-based combat, persona fusion, dungeon infiltration, and school-life mechanics."
+  },
+  {
+    "game": "Monster Hunter World",
+    "genre": "Action RPG",
+    "section": "Overview",
+    "content": "Large monsters, weapon mastery, environment interactions, and crafting-based progression."
+  }
+]
+  
